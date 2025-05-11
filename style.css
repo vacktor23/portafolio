@@ -16,6 +16,7 @@ body {
     padding: 40px;
 }
 
+/* Estilos para la Sección Hero */
 .hero {
     max-width: 800px;
     background: rgba(255, 255, 255, 0.05);
@@ -38,6 +39,11 @@ body {
     margin-bottom: 20px;
     object-fit: cover;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
 }
 
 .hero h1 {
@@ -72,6 +78,7 @@ body {
     background-color: #e0d4f7;
 }
 
+/* Sección de Proyectos */
 .projects {
     width: 100%;
     max-width: 800px;
@@ -158,7 +165,6 @@ body {
 
 .about-me-photo img {
     border: 5px solid #4a187f;
-    /* Color del marco del mismo color que el botón */
     border-radius: 10px;
     padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -166,5 +172,113 @@ body {
     height: 200px;
     object-fit: cover;
     background-color: #4a187f;
-    /* Fondo del mismo color que el botón */
+}
+
+/* Estilos del Footer */
+.footer {
+    width: 100%;
+    background-color: #4a187f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #a678f0;
+    /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para los enlaces de Email y LinkedIn en el Footer */
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 15px;
+    transition: color 0.3s, transform 0.3s;
+    /* Transición para el cambio de color y movimiento */
+}
+
+.footer a:hover {
+    color: #a678f0;
+    /* Color al pasar el ratón */
+    transform: translateY(-2px);
+    /* Movimiento hacia arriba similar al de los botones */
+}
+
+/* Estilos de los Botones en la Sección Hero */
+.hero-button,
+.footer .hero-button {
+    display: inline-block;
+    background-color: #4a187f;
+    /* Mismo color que el resto de los botones */
+    color: white;
+    padding: 10px 25px;
+    margin: 5px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    /* Bordes redondeados */
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    /* Transición suave para efectos de hover */
+}
+
+.hero-button:hover,
+.footer .hero-button:hover {
+    background-color: #34125a;
+    /* Color más oscuro al hacer hover */
+    transform: translateY(-2px);
+    /* Efecto de desplazamiento para mayor elegancia */
+}
+
+.footer .hero-button {
+    background-color: white;
+    color: #4a187f;
+    border: 2px solid #4a187f;
+    /* Borde similar al de los botones en Hero */
+}
+
+.footer .hero-button:hover {
+    background-color: #e0d4f7;
+    color: #4a187f;
+    border-color: #4a187f;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        align-items: center;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .social-links a {
+        display: block;
+        margin: 5px 0;
+    }
 }
