@@ -13,10 +13,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
-/* Estilos para la Sección Hero */
 .hero {
     max-width: 800px;
     background: rgba(255, 255, 255, 0.05);
@@ -29,6 +28,7 @@ body {
     align-items: center;
     text-align: center;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .hero-photo {
@@ -39,11 +39,6 @@ body {
     margin-bottom: 20px;
     object-fit: cover;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 10px;
 }
 
 .hero h1 {
@@ -63,6 +58,13 @@ body {
     line-height: 1.6;
 }
 
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
 .hero-button {
     background-color: #ffffff;
     color: #4a187f;
@@ -71,14 +73,12 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
-    margin: 10px 0;
 }
 
 .hero-button:hover {
     background-color: #e0d4f7;
 }
 
-/* Sección de Proyectos */
 .projects {
     width: 100%;
     max-width: 800px;
@@ -94,6 +94,7 @@ body {
 
 .project {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 40px;
     background: rgba(255, 255, 255, 0.1);
@@ -107,15 +108,18 @@ body {
 }
 
 .project-img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .project-info {
-    max-width: 450px;
+    flex: 1;
+    min-width: 250px;
     text-align: left;
 }
 
@@ -137,6 +141,8 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
+    display: inline-block;
+    margin-top: 8px;
 }
 
 .project-button:hover {
@@ -156,11 +162,15 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .about-me-text {
-    width: 50%;
+    width: 100%;
+    max-width: 500px;
     padding-right: 20px;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .about-me-photo img {
@@ -174,111 +184,73 @@ body {
     background-color: #4a187f;
 }
 
-/* Estilos del Footer */
+/* Footer */
 .footer {
     width: 100%;
-    background-color: #4a187f;
-    color: white;
-    padding: 20px;
+    max-width: 800px;
+    margin-top: 60px;
     text-align: center;
-    margin-top: 40px;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
 }
 
 .footer p {
-    margin-bottom: 10px;
-    font-size: 1rem;
+    margin: 0;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
 }
 
-.social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 5px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+.footer-content {
+    margin-top: 20px;
 }
 
-.social-links a:hover {
-    color: #a678f0;
-    /* Cambio de color al pasar el cursor */
-}
-
-/* Estilos para los enlaces de Email y LinkedIn en el Footer */
-.footer a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 5px 15px;
-    transition: color 0.3s, transform 0.3s;
-    /* Transición para el cambio de color y movimiento */
-}
-
-.footer a:hover {
-    color: #a678f0;
-    /* Color al pasar el ratón */
-    transform: translateY(-2px);
-    /* Movimiento hacia arriba similar al de los botones */
-}
-
-/* Estilos de los Botones en la Sección Hero */
-.hero-button,
-.footer .hero-button {
-    display: inline-block;
-    background-color: #4a187f;
-    /* Mismo color que el resto de los botones */
-    color: white;
-    padding: 10px 25px;
-    margin: 5px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 25px;
-    /* Bordes redondeados */
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease;
-    /* Transición suave para efectos de hover */
-}
-
-.hero-button:hover,
-.footer .hero-button:hover {
-    background-color: #34125a;
-    /* Color más oscuro al hacer hover */
-    transform: translateY(-2px);
-    /* Efecto de desplazamiento para mayor elegancia */
+.footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .footer .hero-button {
-    background-color: white;
+    background-color: #ffffff;
     color: #4a187f;
-    border: 2px solid #4a187f;
-    /* Borde similar al de los botones en Hero */
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .footer .hero-button:hover {
     background-color: #e0d4f7;
-    color: #4a187f;
-    border-color: #4a187f;
-    transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-    .footer-content {
+/* Responsive */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
         align-items: center;
     }
 
-    .social-links {
-        margin-top: 10px;
+    .project-img {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .social-links a {
-        display: block;
-        margin: 5px 0;
+    .project-info {
+        text-align: center;
+    }
+
+    .about-me-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-text {
+        padding: 0;
+        max-width: 100%;
     }
 }
