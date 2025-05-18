@@ -110,12 +110,12 @@ body {
 }
 
 .project-img {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
-    height: auto;
-    /* altura automática para mantener proporción */
-    object-fit: contain;
-    /* muestra la imagen completa sin cortar */
+    height: 250px;
+    /* altura fija para evitar distorsión */
+    object-fit: cover;
+    /* cubre el área sin deformar */
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #000;
@@ -160,13 +160,6 @@ body {
     text-align: center;
 }
 
-.about-me h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    /* Espacio para separar el título del texto */
-    font-weight: bold;
-}
-
 .about-me-content {
     display: flex;
     flex-direction: column;
@@ -188,9 +181,7 @@ body {
     padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 250px;
-    /* aumento de tamaño */
     height: 250px;
-    /* aumento de tamaño */
     object-fit: cover;
     background-color: #4a187f;
 }
@@ -269,7 +260,9 @@ body {
     .project-img {
         width: 100%;
         max-width: 350px;
-        height: auto;
+        height: 250px;
+        /* altura fija también en móvil */
+        object-fit: cover;
     }
 
     .project-info {
@@ -289,8 +282,6 @@ body {
 
     .about-me-photo img {
         width: 300px;
-        /* tamaño ajustado en móvil */
         height: 300px;
-        /* tamaño ajustado en móvil */
     }
 }
