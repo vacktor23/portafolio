@@ -35,7 +35,6 @@ body {
 
 .hero-photo {
     width: 150px;
-    /* Reducido en móviles */
     height: 150px;
     border-radius: 50%;
     border: 4px solid white;
@@ -46,13 +45,11 @@ body {
 
 .hero h1 {
     font-size: 2rem;
-    /* Reducción de tamaño en móviles */
     margin-bottom: 8px;
 }
 
 .hero h2 {
     font-size: 1.25rem;
-    /* Reducción de tamaño */
     margin: 12px 0;
     font-weight: 500;
 }
@@ -93,7 +90,6 @@ body {
 
 .projects h2 {
     font-size: 1.5rem;
-    /* Ajustado para móviles */
     margin-bottom: 30px;
     font-weight: bold;
 }
@@ -101,11 +97,8 @@ body {
 .project {
     display: flex;
     flex-direction: column;
-    /* Cambio para móviles */
     align-items: center;
-    /* Centrado en pantallas pequeñas */
     margin-bottom: 20px;
-    /* Ajuste de margen */
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 8px;
@@ -117,10 +110,15 @@ body {
 }
 
 .project-img {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    /* altura automática para mantener proporción */
+    object-fit: contain;
+    /* muestra la imagen completa sin cortar */
+    border-radius: 8px;
     margin-bottom: 15px;
-    max-width: 100%;
+    background-color: #000;
 }
 
 .project-info {
@@ -162,10 +160,16 @@ body {
     text-align: center;
 }
 
+.about-me h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    /* Espacio para separar el título del texto */
+    font-weight: bold;
+}
+
 .about-me-content {
     display: flex;
     flex-direction: column;
-    /* Cambio para que las imágenes y textos se acomoden de manera vertical en móviles */
     text-align: center;
     justify-content: center;
 }
@@ -183,10 +187,10 @@ body {
     border-radius: 10px;
     padding: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    /* Reducido */
-    height: 150px;
-    /* Reducido */
+    width: 250px;
+    /* aumento de tamaño */
+    height: 250px;
+    /* aumento de tamaño */
     object-fit: cover;
     background-color: #4a187f;
 }
@@ -215,7 +219,6 @@ body {
 .footer .social-links {
     display: flex;
     flex-direction: column;
-    /* Cambio en móviles */
     justify-content: center;
     gap: 12px;
     margin-top: 10px;
@@ -239,12 +242,10 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 20px;
-        /* Reducir el padding en pantallas pequeñas */
     }
 
     .hero-photo {
         width: 150px;
-        /* Reducir el tamaño de la foto en móviles */
         height: 150px;
     }
 
@@ -266,10 +267,9 @@ body {
     }
 
     .project-img {
-        margin-right: 0;
-        margin-bottom: 15px;
         width: 100%;
-        max-width: 100%;
+        max-width: 350px;
+        height: auto;
     }
 
     .project-info {
@@ -288,7 +288,9 @@ body {
     }
 
     .about-me-photo img {
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        /* tamaño ajustado en móvil */
+        height: 300px;
+        /* tamaño ajustado en móvil */
     }
 }
